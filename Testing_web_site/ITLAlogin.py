@@ -2,7 +2,7 @@ import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-import Prueba.Carro.constants as const
+import Carro.constants as const
 from selenium.webdriver.chrome.options import Options
 
 class Login(webdriver.Chrome):

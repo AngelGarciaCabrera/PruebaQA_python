@@ -1,6 +1,16 @@
-from selenium.webdriver.common.by import By
 
-from Prueba.Carro.ITLAlogin import Login
+from Testing_web_site.codewars.CodewarsSelection import CodewarsSelection
+
+with CodewarsSelection() as tester:
+    tester.open()
+
+    tester.go_login()
+    tester.writeIn(path_name="user_email", value="Hola")
+    tester.writeIn(path_name="user_password", value="Hola")
+
+    # tester.choose_pruebas()
+    # tester.choose_programming_language()
+
 
 with Login() as tester:
     tester.open_login()
