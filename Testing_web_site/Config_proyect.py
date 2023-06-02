@@ -42,3 +42,6 @@ class Config(webdriver.Chrome):
         element_by = self.find_element(by, path_name)
         element_by.clear()
         element_by.send_keys(value)
+    def addTextToKey(self,by=By.ID,Key=""):
+        element_by = self.find_element(by,Key)
+        element_by.send_keys(Key)
