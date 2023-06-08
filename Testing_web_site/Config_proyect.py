@@ -2,6 +2,8 @@ import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.keys import Keys
+
 
 
 # Clase de configuracion para todos los tests.
@@ -42,6 +44,6 @@ class Config(webdriver.Chrome):
         element_by = self.find_element(by, path_name)
         element_by.clear()
         element_by.send_keys(value)
-    def addTextToKey(self,by=By.ID,Key=""):
-        element_by = self.find_element(by,Key)
+    def addTextToKey(self,by=By.ID,path="",Key= Keys.ENTER):
+        element_by = self.find_element(by, path)
         element_by.send_keys(Key)

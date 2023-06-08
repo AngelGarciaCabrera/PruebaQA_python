@@ -8,7 +8,13 @@ with PiviGamesSelection() as tester:
     tester.open()
     tester.click_to(by=By.ID,path_name="onesignal-slidedown-cancel-button")
     tester.click_to(by=By.ID, path_name="gp-search-button")
-    tester.writeIn(by=By.CSS_SELECTOR, path_name='input[placeholder="search"]',value="naruto")
+    tester.writeIn(by=By.CSS_SELECTOR, path_name='input[placeholder="search"]', value="naruto")
+    tester.Game_Searched(by=By.CSS_SELECTOR, path='input[placeholder="search"]', Game="naruto", Key=Keys.ENTER)
+    tester.click_to(by=By.XPATH, path_name='//h2/a[@title="NARUTO SHIPPUDEN ULTIMATE NINJA STORM 4 ROAD TO BORUTO Next'
+                                            ' Generation+ ONLINE STEAM v2 + Update 1.09"]')
+    tester.focus_in_elemet(By.XPATH, '//*[@id="movie_player"]/div[4]/button')
+    tester.click_to(by=By.XPATH, path_name='//*[@id="movie_player"]/div[4]/button')
+
 
 
 
@@ -34,9 +40,9 @@ with PiviGamesSelection() as tester:
     # #then we try to add text on the foro
     # tester.select_element_by_xpath("//span[@class='instancename' and text()='Foro de presentación']")
     #
-    # #we try to add a foro but may be we can't
+    # #we try to add a forobut maybe we can't
     #
-    # #then we try to moved to other page
+    # #then we try tomoved to other page
     #
     # #with css selector we can pass other params what different class
     # tester.select_by_css(css='a[data-toggle="collapse"]')
