@@ -1,5 +1,5 @@
 
-#from Testing_web_site.codewars.CodewarsSelection import CodewarsSelection
+# from Testing_web_site.codewars.CodewarsSelection import CodewarsSelection
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from Testing_web_site.PiviGames.PiviGameSelection import PiviGamesSelection
@@ -9,10 +9,6 @@ with PiviGamesSelection() as tester:
     tester.click_to(by=By.ID,path_name="onesignal-slidedown-cancel-button")
     tester.click_to(by=By.ID, path_name="gp-search-button")
     tester.writeIn(by=By.CSS_SELECTOR, path_name='input[placeholder="search"]',value="naruto")
-
-
-
-
 
     # tester.choose_pruebas()
     # tester.choose_programming_language()
