@@ -1,5 +1,5 @@
 
-#from Testing_web_site.codewars.CodewarsSelection import CodewarsSelection
+# from Testing_web_site.codewars.CodewarsSelection import CodewarsSelection
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from Testing_web_site.PiviGames.PiviGameSelection import PiviGamesSelection
@@ -14,10 +14,6 @@ with PiviGamesSelection() as tester:
                                             ' Generation+ ONLINE STEAM v2 + Update 1.09"]')
     tester.focus_in_elemet(By.XPATH, '//*[@id="movie_player"]/div[4]/button')
     tester.click_to(by=By.XPATH, path_name='//*[@id="movie_player"]/div[4]/button')
-
-
-
-
 
 
     # tester.choose_pruebas()
