@@ -3,8 +3,8 @@ from selenium.webdriver.common.by import By
 
 from Testing_web_site.codewars.edge.CodewarsSelectionEdge import CodewarsSelection
 
-USERNAME = "Elioerickramos@gmail.com"
-PASSWORD = "Mosquea42510"
+# Always create the values of this file, will be private for each develop
+import Testing_web_site.priv_config as config_const
 
 with CodewarsSelection() as tester:
     tester.open()
@@ -16,8 +16,8 @@ with CodewarsSelection() as tester:
     tester.click_to(By.XPATH, '//form[@id="new_user"]/button[1]')
 
     # Add credentials to GitHub
-    tester.write_in(path_name="login_field", value=USERNAME)
-    tester.write_in(path_name="password", value=PASSWORD)
+    tester.write_in(path_name="login_field", value=config_const.USERNAME)
+    tester.write_in(path_name="password", value=config_const.PASSWORD)
     tester.click_to(By.XPATH, '//form/div/input[13]')
 
     # Choose a code test
