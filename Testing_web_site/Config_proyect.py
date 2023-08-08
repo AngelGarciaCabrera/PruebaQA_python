@@ -24,7 +24,7 @@ class Config(webdriver.Chrome):
         super(Config, self).__init__(options=chr_options)
 
         # Se llama solo en el constructor
-        self.implicitly_wait(10)
+        self.implicitly_wait(20)
 
         self.maximize_window()
 
@@ -44,6 +44,7 @@ class Config(webdriver.Chrome):
         element_by = self.find_element(by, path_name)
         element_by.clear()
         element_by.send_keys(value)
+
     def addTextToKey(self,by=By.ID,path="",Key= Keys.ENTER):
         element_by = self.find_element(by, path)
         element_by.send_keys(Key)
